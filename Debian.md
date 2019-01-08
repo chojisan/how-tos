@@ -2,9 +2,13 @@
 
 ## How to install Apache
 
-`sudo apt update`
+```
+sudo apt update
+```
 
+```
 sudo apt install apache2
+```
 
 ### Adjusting the Firewall
 
@@ -67,9 +71,36 @@ sudo systemctl disable nginx
 
 sudo systemctl enable nginx
 
-## How to install PHP 7.1
+## How to install PHP
 
-## How to install PHP 7.2
+sudo apt install ca-certificates apt-transport-https
+wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
+echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
+
+### PHP 7.1
+
+```
+sudo apt update
+sudo apt install php7.1
+```
+
+### PHP 7.2
+
+```
+sudo apt update
+sudo apt install php7.2
+```
+
+### PHP 7.3
+
+```
+sudo apt update
+sudo apt install php7.3
+```
+
+```
+sudo apt install php7.3-cli php7.3-common php7.3-curl php7.3-mbstring php7.3-mysql php7.3-xml
+```
 
 ## How to install Python 3.x
 

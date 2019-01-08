@@ -1,5 +1,14 @@
 # Debian 9
 
+Table of Contents
+
+- [How to install Apache](#how-to-install-apache)
+- How to install NGINX
+- How to install PHP
+- How to install Python 3.x
+- How to install MySQL
+- How to install PostgreSQL
+
 ## How to install Apache
 
 ```

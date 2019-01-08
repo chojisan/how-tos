@@ -2,7 +2,7 @@
 
 ## How to install Apache
 
-sudo apt update
+`sudo apt update`
 
 sudo apt install apache2
 
@@ -14,13 +14,11 @@ sudo ufw allow 'WWW'
 
 sudo ufw status
 
-
 ### Checking your Web Server
 
 sudo systemctl status apache2
 
 hostname -I
-
 
 ### Managing the Apache Process
 
@@ -35,8 +33,6 @@ sudo systemctl reload apache2
 sudo systemctl disable apache2
 
 sudo systemctl enable apache2
-
-
 
 ## How to install NGINX
 
@@ -57,7 +53,6 @@ systemctl status nginx
 
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 
-
 ### Managing the Nginx Process
 
 sudo systemctl stop nginx
@@ -71,7 +66,6 @@ sudo systemctl reload nginx
 sudo systemctl disable nginx
 
 sudo systemctl enable nginx
-
 
 ## How to install PHP 7.1
 
@@ -94,13 +88,11 @@ source my_env/bin/activate
 
 deactivate
 
-
-
 ## How to install MySQL
 
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
 
-sudo dpkg -i mysql-apt-config*
+sudo dpkg -i mysql-apt-config\*
 
 sudo apt update
 
@@ -113,7 +105,6 @@ sudo systemctl status mysql
 mysql_secure_installation
 
 mysqladmin -u root -p version
-
 
 ## How to install PostgreSQL
 
@@ -130,4 +121,3 @@ postgres=# ALTER ROLE myprojectuser SET timezone TO 'UTC';
 postgres=# GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
 
 postgres=# \q
-

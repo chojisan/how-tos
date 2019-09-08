@@ -134,7 +134,7 @@ Change the password for root ? ((Press y|Y for Yes, any other key for No) : n
 For the rest of the questions, you should press Y and hit the Enter key at each prompt. This will remove some anonymous users and the test database, disable remote root logins, and load these new rules so that MySQL immediately respects the changes we have made.
 At this point, your database system is now set up and we can move on.
 
-Step 3: Install PHP
+### Step 3: Install PHP
 PHP is the component of our setup that will process code to display dynamic content. It can run scripts, connect to our MySQL databases to get information, and hand the processed content over to our web server to display.
 We can once again leverage the apt system to install our components. We're going to include some helper packages as well, so that PHP code can run under the Apache server and talk to our MySQL database:
 * sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
@@ -208,6 +208,12 @@ If this was successful, then your PHP is working as expected.
 You probably want to remove this file after this test because it could actually give information about your server to unauthorized users. To do this, you can type this:
 * sudo rm /var/www/html/info.php
 You can always recreate this page if you need to access the information again later.
+
+	#### 7.2
+	[sudo apt-get install apt-transport-https lsb-release ca-certificates]
+	[wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -]
+	[echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list]
+	[sudo apt-get install php7.2 php7.2-cli php7.2-common php7.2-opcache php7.2-curl php7.2-mbstring php7.2-mysql php7.2-zip php7.2-xml]
 
 Conclusion
 Now that you have a LAMP stack installed, you have many choices for what to do next. Basically, you've installed a platform that will allow you to install most kinds of websites and web software on your server.
